@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-
 class RoundedRectangleTabIndicator extends Decoration {
   final BoxPainter _painter;
 

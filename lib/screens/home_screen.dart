@@ -8,6 +8,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:book_app/widgets/custom_tab_indicator.dart';
+import 'package:book_app/screens/cart.dart';
 
 class HomeScreen extends StatefulWidget {
   @override
@@ -18,6 +19,16 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: Text('book library'),
+        backgroundColor: Colors.blueGrey,
+        actions: <Widget>[
+          IconButton(
+            icon: Icon(Icons.shopping_cart),
+            onPressed: () =>Navigator.push(context, MaterialPageRoute(builder: (context)=> new cart()),
+          )
+        )],
+      ),
       body: SafeArea(
         child: Container(
           child: ListView(

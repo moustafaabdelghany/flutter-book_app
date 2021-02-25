@@ -36,7 +36,7 @@ var popularBookData = [
   },
   {
     "title": "et3lm",
-    "author": "amr elazab",
+    "author": "Amr Elazab",
     "price": "60",
     "image": "assets/images/et3lm.jpg",
     "copies": "18 copies",

@@ -1,3 +1,5 @@
+import 'package:book_app/DbHelper.dart';
+import 'package:book_app/models/books_table.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 //import 'package:book_app/constants/color.constant.dart';
@@ -10,7 +12,13 @@ class SelectedBookScreen extends StatelessWidget {
 
   SelectedBookScreen({Key key, @required this.popularBookModel})
       : super(key: key);
+  DbHelper helper;
+  void initstate(){
+      super.initstate();
+      helper = DbHelper();
 
+
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -20,9 +28,10 @@ class SelectedBookScreen extends StatelessWidget {
         color: Colors.transparent,
         child: FlatButton(
           color: Colors.red[900],
-          onPressed: () {},
+          onPressed: () {
+          },
           child: Text(
-            'Add to Library',
+            'Add to cart',
             style: GoogleFonts.openSans(
                 fontSize: 14, fontWeight: FontWeight.w600, color: Colors.white),
           ),
